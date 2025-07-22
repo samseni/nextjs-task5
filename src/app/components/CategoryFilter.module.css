@@ -1,0 +1,76 @@
+.categoryFilter {
+    padding: 30px 0;
+}
+
+.categoryButtons {
+    display: flex;
+    gap: 16px;
+    padding: 0 20px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.categoryButtons::-webkit-scrollbar {
+    display: none;
+}
+
+.categoryBtn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 28px;
+    background: white;
+    border: 2px solid #e2e8f0;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.categoryBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border-color: #cbd5e0;
+}
+
+.categoryBtn.active {
+    background: linear-gradient(135deg, #ff6b35 0%, #ff5722 100%);
+    border-color: transparent;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+}
+
+.categoryName {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.categoryCount {
+    font-size: 13px;
+    opacity: 0.8;
+    font-weight: 500;
+}
+
+.categoryBtn:not(.active) .categoryName {
+    color: #4a5568;
+}
+
+.categoryBtn:not(.active) .categoryCount {
+    color: #718096;
+}
+
+@media (max-width: 768px) {
+    .categoryButtons {
+        padding: 0 15px;
+        gap: 12px;
+    }
+
+    .categoryBtn {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+}

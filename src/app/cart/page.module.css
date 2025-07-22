@@ -1,0 +1,288 @@
+.cartPage {
+    padding: 40px 0;
+    min-height: calc(100vh - 80px);
+}
+
+.pageTitle {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 40px;
+    text-align: center;
+    background: linear-gradient(135deg, #ff6b35 0%, #667eea 50%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.cartContent {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 32px;
+}
+
+.cartItems {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.orderSummary {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 249, 250, 0.95) 100%);
+    border-radius: 24px;
+    padding: 32px;
+    height: fit-content;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    position: sticky;
+    top: 100px;
+}
+
+.summaryTitle {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.summaryRow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    padding: 8px 0;
+}
+
+.summaryLabel {
+    color: #666;
+    font-weight: 500;
+}
+
+.summaryValue {
+    font-weight: 700;
+    color: #333;
+}
+
+.summaryDivider {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #e0e0e0, transparent);
+    margin: 20px 0;
+}
+
+.totalRow {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 800;
+    padding: 16px 0;
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.1) 0%, rgba(255, 87, 34, 0.1) 100%);
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.totalValue {
+    background: linear-gradient(135deg, #ff6b35 0%, #ff5722 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.checkoutBtn {
+    width: 100%;
+    padding: 18px;
+    background: linear-gradient(135deg, #ff6b35 0%, #ff5722 100%);
+    color: white;
+    border: none;
+    border-radius: 16px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 24px;
+    box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.checkoutBtn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.checkoutBtn:hover::before {
+    width: 400px;
+    height: 400px;
+}
+
+.checkoutBtn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(255, 107, 53, 0.4);
+}
+
+.clearCartBtn {
+    width: 100%;
+    padding: 14px;
+    background: transparent;
+    color: #dc3545;
+    border: 2px solid #dc3545;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 12px;
+}
+
+.clearCartBtn:hover {
+    background: linear-gradient(135deg, #fc5286 0%, #dc3545 100%);
+    color: white;
+    border-color: transparent;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(220, 53, 69, 0.3);
+}
+
+.emptyCart {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 249, 250, 0.95) 100%);
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(10px);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.emptyCartIcon {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 32px;
+    background: linear-gradient(135deg, #e0e0e0 0%, #f0f0f0 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #bbb;
+    box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.emptyCartTitle {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.emptyCartText {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.continueShoppingBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 40px;
+    background: linear-gradient(135deg, #ff6b35 0%, #ff5722 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
+}
+
+.continueShoppingBtn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(255, 107, 53, 0.4);
+}
+
+.savingsRow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    padding: 12px 16px;
+    background: linear-gradient(135deg, rgba(35, 213, 171, 0.1) 0%, rgba(35, 166, 213, 0.1) 100%);
+    border-radius: 12px;
+    border: 1px solid rgba(35, 213, 171, 0.2);
+}
+
+.savingsLabel {
+    color: #10b981;
+    font-weight: 600;
+}
+
+.savingsValue {
+    color: #10b981;
+    font-weight: 700;
+}
+
+.promoCode {
+    margin-top: 24px;
+    display: flex;
+    gap: 8px;
+}
+
+.promoInput {
+    flex: 1;
+    padding: 12px 20px;
+    border: 2px solid rgba(224, 224, 224, 0.5);
+    border-radius: 12px;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+}
+
+.promoInput:focus {
+    outline: none;
+    border-color: #667eea;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+}
+
+.promoBtn {
+    padding: 12px 28px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+}
+
+.promoBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+@media (max-width: 768px) {
+    .cartContent {
+        grid-template-columns: 1fr;
+    }
+
+    .orderSummary {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-radius: 24px 24px 0 0;
+        box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.1);
+        z-index: 50;
+    }
+}
